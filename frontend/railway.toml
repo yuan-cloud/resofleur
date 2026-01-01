@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+buildCommand = "yarn install && yarn build"
+
+[deploy]
+startCommand = "npx serve -s build -l ${PORT:-3000}"

@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_18", "yarn"]
+
+[phases.install]
+cmds = ["yarn install"]
+
+[phases.build]
+cmds = ["yarn build"]
+
+[start]
+cmd = "npx serve -s build -l ${PORT:-3000}"
